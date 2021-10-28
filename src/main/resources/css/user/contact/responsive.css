@@ -1,0 +1,29 @@
+@media screen and (max-width: 992px) {
+	.main .contact-wrapper {
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.main .main-content {
+		padding: 150px 0;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.main .contact .contact-header {
+		font-size: 2rem;
+	}
+	.form-text {
+		margin-top: 26px;
+	}
+	.main .contact {
+    padding: 40px 24px;
+}
+}
+
+@media screen and (max-width: 440px) {
+	.main .contact {
+		padding: 30px 24px;
+	}
+}

@@ -1,0 +1,170 @@
+/* css của sidebar + header trong mọi page của admin */
+:root {
+  --gray-color: #212529;
+  --silver-color: #909294;
+  --sidebar-width: 250px;
+}
+
+/* Sidebar - nav */
+.nav {
+  width: var(--sidebar-width);
+  height: 100vh;
+  background-color: var(--gray-color);
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  position: fixed;
+  right: calc(100% - var(--sidebar-width));
+  transition: all 0.4s cubic-bezier(0.19, 0.76, 0.23, 0.98);
+}
+.logo {
+  font-size: 2.5rem;
+  color: #fff;
+  font-weight: 600;
+  text-align: left;
+}
+.parent-menu {
+  margin-top: 80px;
+}
+.parent-menu > li {
+}
+.parent-menu > li > a,
+.child-menu > li > a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--silver-color);
+  padding: 14px 0px;
+  text-transform: capitalize;
+  transition: all var(--transition-duration) linear;
+}
+.parent-menu > li > a:hover,
+.child-menu > li > a:hover {
+  color: #fff;
+}
+.parent-menu > li > a > .child-menu__trigger {
+  margin-left: auto;
+  transition: transform var(--transition-duration) ease-in-out;
+}
+.parent-menu > li > a > .child-menu__trigger.on {
+  transform: rotate(90deg);
+}
+.parent-menu > li > a > .child-menu__trigger > i {
+  font-size: 1.5rem;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+/* main content */
+.content {
+  width: calc(100% - var(--sidebar-width));
+  height: 100vh;
+  margin-left: auto;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.19, 0.76, 0.23, 0.98);
+}
+
+.content__top {
+  width: calc(100% - var(--sidebar-width));
+  margin-left: auto;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px;
+  transition: all 0.4s cubic-bezier(0.19, 0.76, 0.23, 0.98);
+}
+.page__header {
+  flex-grow: 1;
+}
+.admin-info {
+  display: flex;
+  align-items: center;
+  gap: var(--avatar-gap);
+  margin-right: 40px;
+}
+.admin-info .image-parent {
+  display: block;
+  width: var(--avatar-size);
+  height: var(--avatar-size);
+  border-radius: 50%;
+  box-shadow: 1px 1px 3px rgb(0 0 0 / 10%);
+  overflow: hidden;
+}
+.admin-info .image-parent > img {
+}
+.admin-info .admin-name {
+	    font-size: 1rem;
+    background: var(--tertiary-color);
+    color: #fff;
+}
+
+/* Sidebar toggle */
+#nav__toggle {
+  margin-right: 50px;
+  cursor: pointer;
+}
+#nav__toggle > i {
+  font-size: 1.8rem;
+}
+.hide-side-bar {
+  right: 100%;
+}
+.span-main-content {
+  width: 100%;
+}
+
+/* Header of the admin page */
+.page__header {
+	text-align: center;
+	margin: 10px 0;
+	flex-grow: 1;
+	max-width: 100%;
+}
+.page__header::after {
+	content: " Bảng điều khiển";
+}
+
+
+
+/* common between every list item pages*/
+
+main.content {
+	    padding-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.simple-pagination {
+	margin-top: 40px;
+}
+
+.light-theme a, .light-theme span {
+	padding: 4px 16px;
+	border-radius: 4px;
+}
+.light-theme .current {
+	background: var(--primary-color);
+}
+.light-theme a:hover, .light-theme li:not(.disabled):not(.active) span:hover {
+	color: var(--primary-color);
+}
+
+main.content  .page-header {
+	align-self: start;
+	    font-size: 2.5rem;
+    margin: 20px 0;
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 1rem;
+    padding: 4px 18px;
+}
+
+main.content  .filter-header {
+	    display: inline-block;
+    padding: 4px 8px;
+    border-radius: .5rem;
+    background: var(--primary-color);
+    color: #fff;
+    margin-bottom: 16px;
+	
+}

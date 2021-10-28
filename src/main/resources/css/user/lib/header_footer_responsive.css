@@ -1,0 +1,171 @@
+/* TABLET */
+@media only screen and (max-width: 1024px) {
+	:root {
+		--menu-padding-left: 50px;
+	}
+	.container {
+		max-width: 886px;
+	}
+
+	.header > .bottom > .center nav ul a {
+		padding: 8px 16px;
+	}
+
+	.footer__child-section > * > p.footer__sub-header {
+		font-size: 1.1rem;
+	}
+	.footer__child-section > * > ul > li > a {
+		font-size: 0.9rem;
+	}
+}
+@media only screen and (max-width: 992px) {
+	.container {
+		max-width: 768px;
+	}
+	.footer__child-section > * > ul {
+		margin-top: 30px;
+	}
+}
+
+/* MOBILE */
+@media only screen and (max-width: 768px) {
+	
+	.container {
+		max-width: 576px;
+	}
+
+	.logo {
+		font-size: 2.2rem;
+	}
+	.header > .bottom {
+		margin-top: 15px;
+		margin-bottom: 15px;
+	}
+
+	.header > .bottom > .center > .login-user {
+		top: 24px;
+		bottom: unset;
+		right: 20px;
+	}
+
+	.header > .top > ul a {
+		margin-left: 16px;
+	}
+
+	.header > .bottom > .center {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 1000;
+
+		width: 100%;
+		height: 0;
+		background-color: #fff;
+
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		overflow: hidden;
+		opacity: 0;
+		transition: all 0.5s ease;
+	}
+	.header > .bottom > .center.on {
+		opacity: 1;
+		height: 100vh;
+	}
+
+	.header > .bottom > .center nav ul {
+		flex-direction: column;
+		transform: translateY(-20%);
+	}
+	.header > .bottom > .center nav li {
+		margin-bottom: 24px;
+	}
+	.header > .bottom > .center nav ul a {
+		text-align: center;
+	}
+	.menu-toggle-container {
+		display: block;
+		z-index: 10000;
+	}
+
+	.overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		z-index: 100;
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+	.overlay.on {
+		right: 0;
+	}
+
+	.footer__child-section > * > ul {
+		margin-top: 20px;
+	}
+	.copyright {
+		margin-top: 50px;
+	}
+	.conveyor-belt {
+		animation-duration: 12s;
+	}
+}
+
+@media only screen and (max-width: 576px) {
+	.container {
+		max-width: 480px;
+	}
+
+	.header > .top {
+		display: none;
+	}
+
+	.header > .top > ul a {
+		margin-left: 12px;
+	}
+
+	.footer__child-section > * > p.footer__sub-header {
+		font-size: 1rem;
+	}
+	.footer__child-section > * > ul > li > a {
+		font-size: 0.8rem;
+	}
+	.footer__child-section > * > ul {
+		margin-top: 0;
+	}
+	.footer__sub-header {
+		margin-bottom: 10px;
+	}
+
+	.back-to-top {
+		bottom: 16px;
+		right: 20px;
+	}
+
+	.footer__child-section > * > ul:nth-of-type(2) {
+		margin-top: 10px;
+	}
+
+	.footer {
+		margin-top: 150px;
+	}
+	.header > .bottom > .right > .account-area > ul a {
+	
+	padding: 10px 20px;
+}
+}
+
+@media only screen and (max-width: 448px) {
+	:root {
+		--menu-padding-left: 20px;
+	}
+	.logo {
+		font-size: 2rem;
+	}
+	.container {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}

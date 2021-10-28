@@ -1,0 +1,106 @@
+.form-text {
+	margin-top: 56px;
+}
+.form-text > input:required ~ span::before {
+	content: "required";
+	position: absolute;
+	right: 4%;
+	top: -60%;
+	background-color: #000;
+	color: #fff;
+	padding: 2px 6px;
+	font-size: 11px;
+}
+
+/*  */
+form .form-header {
+	margin-bottom: 6px;
+	padding-top: 6px;
+	padding-bottom: 6px;
+	font-size: 1.1rem;
+}
+form .fieldsets {
+	margin-top: 30px;
+	display: flex;
+	flex-wrap: wrap;
+}
+form .fieldsets fieldset {
+	flex-basis: 50%;
+	margin-bottom: 16px;
+}
+form .fieldsets fieldset:nth-child(odd) {
+	padding-right: 15px;
+}
+form .fieldsets fieldset:nth-child(even) {
+	padding-left: 15px;
+}
+
+form .fieldsets fieldset select {
+	width: 100%;
+	padding: 2px 20px;
+}
+form .fieldsets fieldset option {
+	display: inline-block;
+}
+form .fieldsets fieldset input[type="text"] {
+	display: inline-block;
+	width: 100%;
+	padding: 4px 10px;
+	outline: none;
+}
+
+form textarea {
+	width: 100%;
+	padding: 4px 6px;
+}
+form .btn {
+	width: 100%;
+}
+
+.error-message {
+	display: none;
+}
+.error-message.on {
+	display: block;
+}
+
+.content {
+	padding: 40px 120px 0;
+}
+
+
+/* img display */
+.product-image-container {
+	display:flex;
+}
+.product-image-container > div {
+	    flex-grow: 1;
+    flex-basis: 40%;
+    padding: 10px;
+}
+.product-image-container .image-parent {
+    border: 1px solid #ddd;
+}
+
+/* đặt 2 form text lên thành 1 hàng */
+.wrapper-parent {
+	display: flex;
+	flex-wrap: wrap;
+	margin-bottom: 20px;
+}
+.wrapper-parent > .wrapper  {
+	flex-basis: 50%;
+}
+.wrapper-parent > .wrapper:nth-of-type(odd) {
+	padding-right: 15px;
+}
+.wrapper-parent > .wrapper:nth-of-type(even) {
+	padding-left: 15px;
+}
+
+.form-checkbox {
+	margin-bottom: 20px;
+}
+
+/**/
+.select-wrapper{display: inline-block;}

@@ -1,0 +1,88 @@
+@media only screen and (max-width: 992px) {
+	.filters>form {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		column-gap: 15px;
+	}
+	.main .btn {
+		white-space: nowrap;
+	}
+	.form-price-range input {
+    min-width: 90px;
+    height: 38px;
+    padding: 0 10px;
+    border-radius: 0;
+    border: 1px solid #9da2a7;
+    outline: none;
+}
+	.form-price-range input {
+		min-width: 70px;
+	}
+	
+	.filters form .btn {
+    grid-column: 4;
+}
+}
+
+@media only screen and (max-width: 768px) {
+	.filters>form {
+		flex-wrap: wrap;
+	}
+	.filters>form>* {
+		flex-grow: 1;
+	}
+	
+	.filters>form {
+		grid-template-columns: repeat(2,1fr);
+    grid-template-rows: auto;
+	}
+	
+	.filters form .btn {
+    grid-column: 2;
+}
+	
+	    
+}
+
+@media only screen and (max-width: 576px) {
+	
+	.filters fieldset {
+		margin-bottom: 8px;
+	}
+
+	.filters fieldset select {
+		text-transform: capitalize;
+		padding: 4px 20px;
+	}
+	.product__info__title {
+		font-size: 1.7rem;
+	}
+	.product__info__price {
+		font-size: 1.1rem;
+	}
+	
+	.filters>form {
+		grid-template-columns: 1fr;
+    grid-template-rows: auto;
+	}
+	
+	.filters form .btn {
+    grid-column: unset;
+}
+
+.filters form fieldset {
+    margin-bottom: 10px;
+}
+.filters .form-header {
+		padding-top: 6px;
+		margin-bottom: 0;
+	}
+}
+
+@media only screen and (max-width: 440px) {
+	.main .search-box form {
+		min-width: unset;
+		width: 100%;
+	}
+}
