@@ -5,8 +5,8 @@ target/
 !**/src/test/**/target/
 
 ### CREDENTIALS ###
-/src/main/resources/application.properties
-/src/main/java/com/trinhquycong/config/MailConfig.java
+src/main/resources/application.properties
+src/main/java/com/trinhquycong/config/MailConfig.java
 
 ### STS ###
 .apt_generated
