@@ -51,7 +51,7 @@
 		<jsp:include page="/WEB-INF/views/admin/fragment/sidebar.jsp"></jsp:include>
 
 		<main class="content px-3">
-			<h2 class="page-header ">Sản phẩm</h2>
+			<h2 class="page-header ">Dòng sản phẩm</h2>
 			
 			<!-- nút tạo mới -->
 			<div class="new">
@@ -99,7 +99,7 @@
 					</div>
 
 					<div class="select-wrapper">
-						<label for="gender">Trạng thái</label>
+						<label for="status">Trạng thái</label>
 						<form:select path="status" class="form-select">
 							<form:option value="">All</form:option>
 							<form:option value="true">Active</form:option>

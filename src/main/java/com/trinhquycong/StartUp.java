@@ -13,6 +13,7 @@ public class StartUp {
 	}
 	
 	// thêm nút quên mk trong trang user account
+	// giới hạn admin == 1;
 	
 	/**  thu debug khi chay tren pagekite
 	 * - trang mà mình bị tự hủy vì không gia hạn - 30 ngày - e.. https://jelastic.com/

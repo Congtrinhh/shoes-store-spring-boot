@@ -10,7 +10,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="icon" type="image/png" href="${base}/images/user/icon/fav1.png"/>
-<title>Danh sách Sản phẩm - size</title>
+<title>Danh sách Dòng sản phẩm</title>
 
 <!-- Jquery -->
 <script
@@ -50,7 +50,7 @@
 		<jsp:include page="/WEB-INF/views/admin/fragment/sidebar.jsp"></jsp:include>
 
 		<main class="content px-3">
-			<h2 class="page-header ">Sản phẩm - Size</h2>
+			<h2 class="page-header ">Sản phẩm</h2>
 
 			<!-- new item -->
 			<div class="new">

@@ -84,7 +84,13 @@
 				enctype="multipart/form-data" modelAttribute="productSize">
 
 				<form:hidden path="id" />
-
+				<div class="select-wrapper" style=" width: 150px;">
+					<label for="status">Trạng thái</label>
+					<form:select path="status" class="form-select">
+						<form:option value="true">Active</form:option>
+						<form:option value="false">Inactive</form:option>
+					</form:select>
+				</div>
 				<div class="wrapper-parent">
 				
 						<!-- quantity -->

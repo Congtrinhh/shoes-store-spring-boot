@@ -66,6 +66,7 @@ public class UserAdminController extends BaseController{
 	public String toCreateOnePage(Model model) {
 
 		User user = new User();
+		user.setStatus(true);
 		List<Role> roles = roleService.findAll();
 
 		model.addAttribute("user", user);
@@ -181,7 +182,7 @@ public class UserAdminController extends BaseController{
 
 		List<Role> roles = roleService.findAll();
 		model.addAttribute("roles", roles);
-
+		
 		return "admin/userCreateOrUpdate";
 	}
 

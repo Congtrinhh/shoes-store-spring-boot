@@ -152,7 +152,6 @@ public class UserService extends BaseService<User> {
 		
 		user.setCreatedDate(userFromDB.getCreatedDate());
 		user.setUpdatedDate(new Date());
-		user.setStatus(userFromDB.getStatus());
 
 		return this.saveOrUpdate(user);
 	}

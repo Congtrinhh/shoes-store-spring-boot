@@ -77,8 +77,6 @@ public class CategoryAdminController extends BaseController {
 				// vì @ModelAttribute Category category, createdDate = null
 				Category categoryFromDB = categoryService.getById(category.getId());
 				category.setCreatedDate(categoryFromDB.getCreatedDate());
-				category.setStatus(categoryFromDB.getStatus());
-
 				category.setUpdatedDate(new Date());
 			}
 			category.setSeo(Utilities.slugify(category.getName()));

@@ -73,8 +73,7 @@ public class BrandAdminController extends BaseController {
 				// vì @ModelAttribute Brand brand, createdDate = null
 				Brand brandFromDB = brandService.getById(brand.getId());
 				brand.setCreatedDate(brandFromDB.getCreatedDate());
-				brand.setStatus(brandFromDB.getStatus());
-				
+				//brand.setStatus(brandFromDB.getStatus());
 				brand.setUpdatedDate(new Date());
 			}
 		}

@@ -83,14 +83,23 @@
 				</c:forEach>
 				
 				<c:if test="${not empty currentRoleName }"><p>Quyền hiện tại: <b>${currentRoleName }</b></p></c:if>
-				<span>Quyền</span>
+				
 				<div class="select-wrapper">
+					<label for="role-name">Quyền</label>
 					<select name="role-name" class="form-select"  <c:if test="${empty user.id}">required="true"</c:if>> 
 						<option value="">-- quyền --</option>
 						<c:forEach items="${roles }" var="r">
 							<option value="${r.name }" <c:if test="${r.name eq currentRoleName}">selected="true"</c:if> >${r.name }</option>
 						</c:forEach>
 					</select> 
+				</div>
+				
+				<div class="select-wrapper" style="margin-top: 16px; width: 150px;">
+					<label for="status">Trạng thái</label>
+					<form:select path="status" class="form-select">
+						<form:option value="true" selected="selected">Active</form:option>
+						<form:option value="false">Inactive</form:option>
+					</form:select>
 				</div>
 				
 				<div class="wrapper-parent">

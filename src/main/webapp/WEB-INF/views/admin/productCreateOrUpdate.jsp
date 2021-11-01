@@ -10,7 +10,8 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="icon" type="image/png" href="${base}/images/user/icon/fav1.png"/>
+<link rel="icon" type="image/png"
+	href="${base}/images/user/icon/fav1.png" />
 <title>Sản phẩm - thêm - cập nhật</title>
 
 <!-- Jquery -->
@@ -74,11 +75,11 @@
 			<div class="form-header create-area__header">
 				<c:out value="${headerText }" />
 				<c:if test="${product.id != null}">
-				<!-- nút tạo mới -->
-				<div class="new">
-					<a href="${base }/admin/product/create" class="btn"><i
-						class="far fa-plus-square"></i> create new</a>
-				</div>
+					<!-- nút tạo mới -->
+					<div class="new">
+						<a href="${base }/admin/product/create" class="btn"><i
+							class="far fa-plus-square"></i> create new</a>
+					</div>
 				</c:if>
 			</div>
 
@@ -89,9 +90,17 @@
 
 				<form:hidden path="id" />
 
+				<div class="select-wrapper" style=" width: 150px;">
+					<label for="status">Trạng thái</label>
+					<form:select path="status" class="form-select">
+						<form:option value="true">Active</form:option>
+						<form:option value="false">Inactive</form:option>
+					</form:select>
+				</div>
+
 				<div class="wrapper-parent">
-						<!-- name -->
-				<div class="wrapper">
+					<!-- name -->
+					<div class="wrapper">
 						<div class="form-text">
 							<form:input path="name" required="required" />
 							<label for="" class="label-name">
@@ -99,7 +108,7 @@
 							</label> <span></span>
 						</div>
 					</div>
-						<!-- price -->
+					<!-- price -->
 					<div class="wrapper">
 						<div class="form-text">
 							<form:input path="price" required="required" name="price" />

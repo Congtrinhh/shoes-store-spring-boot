@@ -3,11 +3,17 @@ $(window).on('load', function() {
 	$('.btn-increase').on('click', function(event) {
 		if ($('#productOption').valid()) {
 			let currentValue = Number($('[name="product-quantity"]').attr('value'));
-			if (currentValue < $('[name="in-stock-quantity"]').attr('value')) {
+			let inStockQuantity;
+			$('.hidden-product-detail-wrapper .hidden-product-detail-item [name="size-no"]').each(function(){
+				if ($(this).attr('value') == $('select[name="productSize"]').val()) {
+					inStockQuantity = 	$(this).parent().find('[name="in-stock-quantity"]').attr('value');
+				}
+			})
+			if (currentValue < inStockQuantity) {
 				$('[name="product-quantity"]').attr('value', currentValue + 1);
 				$(this).parent().siblings('.error-message').html('');
 			} else {
-				$(this).parent().siblings('.error-message').html('Chỉ còn ' + $('[name="in-stock-quantity"]').attr('value') + ' sản phẩm trong kho');
+				$(this).parent().siblings('.error-message').html('Chỉ còn ' + inStockQuantity + ' sản phẩm trong kho');
 				$(this).parent().siblings('.error-message').addClass('on');
 			}
 

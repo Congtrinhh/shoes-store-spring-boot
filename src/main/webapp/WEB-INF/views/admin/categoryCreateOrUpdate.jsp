@@ -99,6 +99,14 @@
 							</label> <span></span>
 						</div>
 					</div>
+					
+					<div class="select-wrapper" style="margin-top: 16px;">
+						<label for="status">Trạng thái</label>
+						<form:select path="status" class="form-select">
+							<form:option value="true">Active</form:option>
+							<form:option value="false">Inactive</form:option>
+						</form:select>
+					</div>
 
 				</div>
 

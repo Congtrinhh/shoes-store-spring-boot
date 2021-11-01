@@ -77,7 +77,6 @@ public class SizeAdminController extends BaseController{
 				// vì @ModelAttribute Size size, createdDate = null
 				Size sizeFromDB = sizeService.getById(size.getId());
 				size.setCreatedDate(sizeFromDB.getCreatedDate());
-				size.setStatus(sizeFromDB.getStatus());
 
 				size.setUpdatedDate(new Date());
 			}
